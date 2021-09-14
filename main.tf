@@ -21,3 +21,13 @@ resource "docker_container" "nodered_container" {
         external = 1880
     }
 }
+
+output "IP-Adress" {
+  value = docker_conteiner.nodered_container.ip_adress
+  description = "TheIP adress of the container"
+}
+
+uotput "container-name" {
+  value = docker_container.nodered_container.name
+  description = "The name of the container"
+      
