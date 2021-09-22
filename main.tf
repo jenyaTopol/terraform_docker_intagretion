@@ -19,6 +19,12 @@ resource "random_string" "random" {
   upper = false
 }
 
+resource "random_string" "random2" {
+  length = 4
+  special = false
+  upper = false
+}
+
 resource "docker_container" "nodered_container" {
     name = join("-",["nodered", random_string.random.result])
     image = docker_image.nodered_image.latest
@@ -29,7 +35,7 @@ resource "docker_container" "nodered_container" {
 }
 
 resource "docker_container" "nodered_container2" {
-    name = join("-",["nodered2", random_string.random.result])
+    name = join("-",["nodered2", random_string.random2.result])
     image = docker_image.nodered_image.latest
     ports {
         internal = 1880
