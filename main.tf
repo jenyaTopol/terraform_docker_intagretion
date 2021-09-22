@@ -42,6 +42,11 @@ output "IP-Adress" {
   value = join(":", [docker_conteiner.nodered_container.ip_adress, docker_container.nodered_conteiner.ports[0].external])
   description = "TheIP adress of the container"
 }
+output "IP-Adress" {
+  value = join(":", [docker_conteiner.nodered_container2.ip_adress, docker_container.nodered_conteiner2.ports[0].external])
+  description = "TheIP adress of the container"
+}
+
 
 uotput "container-name" {
   value = docker_container.nodered_container.name
