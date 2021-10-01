@@ -32,22 +32,22 @@ resource "docker_container" "nodered_container" {
     }
 }
 
-output "IP-Adress" {
-  value = join(":", [docker_conteiner.nodered_container[0].ip_adress, docker_container.nodered_conteiner[0].ports[0].external])
-  description = "TheIP adress of the container"
-}
+#output "IP-Adress" {
+#  value = join(":", [docker_conteiner.nodered_container[0].ip_adress, docker_container.nodered_conteiner[0].ports[0].external])
+#  description = "TheIP adress of the container"
+#}
 
-uotput "container-name" {
-  value = docker_container.nodered_container[0].name
-  description = "The name of the container"
-}      
+#uotput "container-name" {
+#  value = docker_container.nodered_container[0].name
+#  description = "The name of the container"
+#}      
 
-output "IP-Adress" {
-  value = join(":", [docker_conteiner.nodered_container[1].ip_adress, docker_container.nodered_conteiner[1].ports[0].external])
-  description = "TheIP adress of the container"
-}
+#output "IP-Adress" {
+#  value = join(":", [docker_conteiner.nodered_container[1].ip_adress, docker_container.nodered_conteiner[1].ports[0].external])
+#  description = "TheIP adress of the container"
+#}
 
-uotput "container-name" {
-  value = docker_container.nodered_container[1].name
-  description = "The name of the container"  
-}
+#uotput "container-name" {
+#  value = docker_container.nodered_container[1].name
+#  description = "The name of the container"  
+#}
